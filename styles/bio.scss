@@ -1,0 +1,100 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+@use "./partials/typography" as *;
+
+html,
+body {
+  font-family: $font-face;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  width: 100%;
+  //header nav
+  &__nav {
+    background-color: $primary-black;
+    width: 100%;
+    height: 12vh;
+    padding-top: 0.625rem;
+  }
+  &__nav-logo {
+    background-image: url("../assets/logos/Logo-bandsite.svg");
+    height: 3vh;
+    width: 7rem;
+    margin: auto;
+  }
+  &__nav-links {
+    width: 100%;
+    display: flex;
+    align-content: space-between;
+    padding-top: 1.25rem;
+  }
+  &__nav-a {
+    color: $primary-white;
+    text-decoration: none;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+
+    &:hover,
+    &.active {
+      border-bottom: 4px solid white;
+      padding-bottom: 1.05rem;
+    }
+  }
+}
+
+.main {
+  //hero section
+  &__hero {
+    position: relative;
+  }
+  &__hero-image {
+    height: 38vh;
+    width: 100%;
+    opacity: 70%;
+    display: block;
+  }
+  &__hero-text {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 100%;
+    height: 2.75rem;
+    font-size: $section-header;
+    color: $primary-white;
+  }
+
+  //musicians and photo gallary section
+  &__section {
+    margin: 1rem;
+  }
+  &__section-header {
+    font-size: $section-header;
+    margin: 1.5rem auto 1rem 0;
+  }
+  &__section-img {
+    height: 36vh;
+    width: 100%;
+  }
+  &__section-subtext {
+    font-weight: 400; //not getting applied
+  }
+}
+.photo-gallery {
+  background-color: $secondary-alabaster;
+  padding: 1.25rem 1rem;
+}
+
+.footer{
+    background-color: $primary-black;
+    padding: 1.25rem 1rem;
+    color: $primary-white;
+    &__icon{
+        padding-right: 2rem;
+    }
+    &__logo{
+        margin-top: 4rem;
+    }
+}

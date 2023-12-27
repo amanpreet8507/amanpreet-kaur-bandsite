@@ -1,1 +1,105 @@
-/*# sourceMappingURL=bio.css.map */
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff"), url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff"), url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff"), url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+html,
+body {
+  font-family: "Avenir Next LT Pro", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+}
+.header__nav {
+  background-color: #323232;
+  width: 100%;
+  height: 12vh;
+  padding-top: 0.625rem;
+}
+.header__nav-logo {
+  background-image: url("../assets/logos/Logo-bandsite.svg");
+  height: 3vh;
+  width: 7rem;
+  margin: auto;
+}
+.header__nav-links {
+  width: 100%;
+  display: flex;
+  align-content: space-between;
+  padding-top: 1.25rem;
+}
+.header__nav-a {
+  color: #FFFFFF;
+  text-decoration: none;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+}
+.header__nav-a:hover, .header__nav-a.active {
+  border-bottom: 4px solid white;
+  padding-bottom: 1.05rem;
+}
+
+.main__hero {
+  position: relative;
+}
+.main__hero-image {
+  height: 38vh;
+  width: 100%;
+  opacity: 70%;
+  display: block;
+}
+.main__hero-text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 100%;
+  height: 2.75rem;
+  font-size: 2.25rem;
+  color: #FFFFFF;
+}
+.main__section {
+  margin: 1rem;
+}
+.main__section-header {
+  font-size: 2.25rem;
+  margin: 1.5rem auto 1rem 0;
+}
+.main__section-img {
+  height: 36vh;
+  width: 100%;
+}
+.main__section-subtext {
+  font-weight: 400;
+}
+
+.photo-gallery {
+  background-color: #FAFAFA;
+  padding: 1.25rem 1rem;
+}
+
+.footer {
+  background-color: #323232;
+  padding: 1.25rem 1rem;
+  color: #FFFFFF;
+}
+.footer__icon {
+  padding-right: 2rem;
+}
+.footer__logo {
+  margin-top: 4rem;
+}/*# sourceMappingURL=bio.css.map */
