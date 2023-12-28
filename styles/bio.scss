@@ -17,19 +17,36 @@ body {
     width: 100%;
     height: 12vh;
     padding-top: 0.625rem;
+    
+    @include tablet{
+        height: 9vh;
+        display: flex;
+        align-items: center;
+    }
   }
   &__nav-logo {
     background-image: url("../assets/logos/Logo-bandsite.svg");
     height: 3vh;
-    width: 7rem;
+    width: 9.5rem;
     margin: auto;
+
+    @include tablet{
+        margin: auto 4%;
+        width: 11.5rem;
+    }
   }
+
   &__nav-links {
     width: 100%;
     display: flex;
-    align-content: space-between;
+    align-content: space-between;   
     padding-top: 1.25rem;
+
+    @include tablet{
+        gap: 4%;
+    }
   }
+
   &__nav-a {
     color: $primary-white;
     text-decoration: none;
@@ -37,10 +54,17 @@ body {
     text-align: center;
     align-items: center;
 
+    @include tablet{
+        width: 10%;
+    }
+
     &:hover,
     &.active {
       border-bottom: 4px solid white;
-      padding-bottom: 1.05rem;
+      padding-bottom: 2rem;
+      @include tablet{
+
+      }
     }
   }
 }
@@ -50,12 +74,21 @@ body {
   &__hero {
     position: relative;
   }
+
   &__hero-image {
     height: 38vh;
     width: 100%;
     opacity: 70%;
     display: block;
+    @include tablet{
+        height: 70vh;
+    }
+
+    @include desktop{
+        height: auto;
+    }
   }
+
   &__hero-text {
     position: absolute;
     top: 30%;
@@ -64,37 +97,161 @@ body {
     height: 2.75rem;
     font-size: $section-header;
     color: $primary-white;
+    @include tablet{
+        font-size: $page-header;
+    }
   }
 
   //musicians and photo gallary section
   &__section {
     margin: 1rem;
   }
+
   &__section-header {
     font-size: $section-header;
     margin: 1.5rem auto 1rem 0;
+
+    @include tablet{
+        margin: 4rem auto 4rem 2rem;
+    }
+
+    @include desktop{
+        font-size: $page-header;
+    }
   }
+
+  &__section-subheader{
+    font-size: $subheader;
+  }
+
+  &__section-div{
+    @include tablet{
+        margin: auto 10%;
+    }
+  }
+
   &__section-img {
     height: 36vh;
     width: 100%;
+    @include tablet{
+
+        width: 100%;
+        height: 50vh;
+    }
   }
+
+  &__section-text{
+    @include tablet{
+        display: flex;
+        gap: 2rem;
+        
+    }
+  }
+
   &__section-subtext {
     font-weight: 400; //not getting applied
+    
   }
 }
+
 .photo-gallery {
   background-color: $secondary-alabaster;
   padding: 1.25rem 1rem;
+
+  @include tablet{
+    padding: 2rem 3rem 0 3rem;
+  }
+
+  &__imgs-div{
+    @include tablet{
+        margin: 4% 0 0 4%;
+    }
+  }
+
+  &__img{
+    @include tablet{
+        width: 28%;
+        height: 20vh;
+        padding-right: 4%;
+        padding-bottom: 4%;
+    }
+  }
 }
 
 .footer{
     background-color: $primary-black;
     padding: 1.25rem 1rem;
     color: $primary-white;
+
+    @include desktop{
+        padding: 3% 5%;
+    }
+
+    &__div-container{
+        @include tablet{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        @include desktop{
+            justify-content: space-between;
+            
+        }
+    }
+
+    &__nav{
+        @include tablet{
+            display: flex;
+            gap: 2rem;
+        }
+    }
+
+    &__nav-header{
+        @include tablet{
+            margin: 0;
+            font-size: $subheader;
+        }
+        @include desktop{
+            font-size: $page-header;
+        }
+    }
+
+    &__div-icons{
+        @include desktop{
+            padding: 1rem;
+        }
+    }
+
     &__icon{
         padding-right: 2rem;
     }
-    &__logo{
+
+    &__logo-img{
         margin-top: 4rem;
+        @include tablet{
+            margin: 0;
+            height: 1.25rem;
+            height: 3vh;
+            width: 9.5rem;
+        }
+    }
+
+    &__contact{
+        @include tablet{
+            display: flex;
+            gap: 3rem;
+        }
+    }
+
+    &__contact-div{
+        @include desktop{
+            margin: 4rem 0;
+            font-size: $subheader;
+        }
+    }
+
+    &__copyright-text{
+        @include desktop{
+            font-size: $subheader;
+        }
     }
 }
