@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bandsite</title>
-    <link href="./styles/bio.css" rel="stylesheet"></link>
+    <link href="./styles/bio.css" rel="stylesheet" />
 </head>
 <body>
      <!-- Header Section -->
     <header class="header">
         <nav class="header__nav">
-            <div href="./index.html" class="header__nav-logo"></div>
+            <a href="./index.html" >
+                <img class="header__nav-logo" src="./assets/logos/Logo-bandsite.svg"/>
+            </a>
             <div class="header__nav-links">
-                <a href="./index.html" class="header__nav-a active">Biography</a>
+                <a href="./index.html" class="header__nav-a header__nav-a--active">Biography</a>
                 <a href="" class="header__nav-a">Shows</a>
             </div>
         </nav>
@@ -31,16 +33,16 @@
             <p class="main__section-header">About the Musicians</p>
             <div class="main__section-div">
                 <img class="main__section-img" src="./assets/images/band.jpg">
-                <p class="main__section-subheader">"We push each other to be the best. It's not 
+                <p class="main__section-p main__definition">"We push each other to be the best. It's not 
                     uncommon for one of us to say 'this needs to be better, back to the drawing board'"
                 </p>
-                <p class="main__section-text">- Bryan Teddy, lead vocalist of The Bees Knees</p>
+                <p class="main__section-writer">- Bryan Teddy, lead vocalist of The Bees Knees</p>
                 <p class="main__section-subheader">The Bees Knees</p>
                 <div class="main__section-text">
-                    <p class="main__section-subtext">
+                    <p class="main__section-p">
                         The Bees Knees is a pop rock band originating from San Francisco, California. The band consists of lead vocalist Bryan Teddy, guitarist Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer Freddie Fischer. The band achieved its first commercial success as an unsigned act, drawing attention from manager Cam Adams. Having worked with other popular acts (The Elephant In The Room, One Trick Pony, The Cat’s Meow), Adams was confident the band could succeed even further, pushing them to sign with Magenta Records. 
                     </p>
-                    <p class="main__section-subtext">
+                    <p class="main__section-p">
                         From there, the band has soared, gaining international recognition and ranking in the top 10 on the Poster Charts. New fans immediately fell in love with the band’s original and organic attitude, solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans affectionately refer to themselves as “The Hive” and are drawn to their candid and authentic performances on stage. Looking forward to touring in the future, The Bees Knees are currently recording their second studio album, looking to be released in late 2021.
                     </p>
                 </div>
@@ -67,15 +69,17 @@
     <!-- Footer Section -->
     <footer class="footer">
         <div class="footer__div-container">
-            <div class="footer__container-conatact">
+            <div class="footer__nav-and-contact">
+            <!-- Footer Nav containing (Get in Touch) + icons-->
             <nav class="footer__nav">
                 <h1 class="footer__nav-header">Get in Touch</h1>
-                <div class="footer__div-icons">
+                <div class="footer__nav-icons">
                     <img class="footer__icon" src="./assets/icons/Icon-instagram.svg"/>
                     <img class="footer__icon" src="./assets/icons/Icon-facebook.svg"/>
                     <img class="footer__icon" src="./assets/icons/Icon-twitter.svg"/>
                 </div>
             </nav>
+            <!-- Footer Contact description section -->
             <section class="footer__contact">
                 <div class="footer__contact-div">
                     <p class="footer__contact-text__bold">Cam Adams</br>The Bees Knees Management</p>
@@ -91,11 +95,16 @@
                     <p class="footer__contact-text__bold">Carson Whyte</br>ARCH Entertainment</p>
                     <p class="footer__contact-text">Booking Agent for</br>UK / EU / AU</p>
                     <p class="footer__contact-text">cwhyte@archentertainment.com</p>
-                </div>
-                
+                </div>               
             </section>
-        </div class="footer__logo">
-            <img class ="footer__logo-img" src="./assets/logos/Logo-bandsite.svg"/>
+        </div>
+        <!-- Footer Bansite Logo -->
+        <div class="footer__logo">
+            <a href="./index.html">
+                <img class ="footer__logo-img" src="./assets/logos/Logo-bandsite.svg"/>
+            </a>
+        </div>
+        <!-- Footer Copyright -->
         </div>
         <p class="footer__copyright-text">Copyright The Bees Knees @ 2021 All Rights Reserved</p>
     </footer>

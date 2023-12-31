@@ -1,5 +1,5 @@
 // font-family
-$font-face: "Avenir Next LT Pro", sans-serif;
+// $font-face: "Avenir Next LT Pro", sans-serif;
 
 // responsive screen breakpoints
 $tablet-breakpoint: 768px;
@@ -16,8 +16,8 @@ $secondary-mercury: #E1E1E1;
 $secondary-alabaster: #FAFAFA;
 
 // font-size
-$page-header: 3.75rem;
-$section-header: 2.25rem;
-$subheader: 1.5rem;
-$body-copy: .875rem;
-$labels-buttons: .75rem;
+$page-header: 3.75rem;  //60px
+$section-header: 2.25rem;   //36px
+$subheader: 1.5rem;    //24px
+$body-copy: 0.875rem;    //14px
+$labels-buttons: 0.75rem;    //12px
