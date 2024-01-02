@@ -128,11 +128,12 @@ body {
 }
 .main__section-header {
   font-size: 2.25rem;
-  margin: 1.5rem auto 1rem 0;
+  margin: 1.5rem;
   font-weight: bold;
 }
 @media screen and (min-width: 768px) {
   .main__section-header {
+    padding-top: 4rem;
     margin: 4rem auto 4rem 2rem;
   }
 }
@@ -188,13 +189,14 @@ body {
 @media screen and (min-width: 768px) {
   .photo-gallery__imgs-div {
     flex-wrap: wrap;
-    margin-left: 4rem;
+    margin: auto auto 3rem auto;
+    text-align: center;
   }
 }
 .photo-gallery__img {
   display: block;
   width: 100%;
-  margin: 1.25rem 1rem;
+  margin: 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .photo-gallery__img {

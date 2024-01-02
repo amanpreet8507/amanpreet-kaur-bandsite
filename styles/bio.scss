@@ -129,10 +129,12 @@ body {
 
   &__section-header {
     font-size: $section-header;
-    margin: 1.5rem auto 1rem 0;
+    margin: 1.5rem;
     font-weight: bold;
+    
 
     @include tablet {
+      padding-top: 4rem;
       margin: 4rem auto 4rem 2rem;
     }
 
@@ -193,14 +195,15 @@ body {
     margin-right: 1rem;
     @include tablet {
       flex-wrap: wrap;
-      margin-left: 4rem;
+      margin: auto auto 3rem auto;
+      text-align: center;
     }
   }
 
   &__img {
     display: block;
     width: 100%;
-    margin: 1.25rem 1rem;
+    margin: 1rem 1rem;
 
     
     @include tablet {
@@ -217,7 +220,6 @@ body {
   background-color: $primary-black;
   padding: 1rem 2rem;
   color: $primary-white;
-  
 
   @include tablet{
     padding: 3rem 5rem;
