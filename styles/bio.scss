@@ -182,17 +182,18 @@ body {
 // specifically  photo gallery content
 .photo-gallery {
   background-color: $secondary-alabaster;
-  padding: 1.25rem 1rem;
+  margin: 1.5rem 1rem 1.5rem 0;
+  box-sizing: border-box;
 
   @include tablet {
     //padding: 2rem 3rem 2rem 3rem;
   }
 
   &__imgs-div {
+    margin-right: 1rem;
     @include tablet {
-      //margin:  0 0 4%;
       flex-wrap: wrap;
-      margin-left: 2.5rem;
+      margin-left: 4rem;
     }
   }
 
@@ -200,6 +201,7 @@ body {
     display: block;
     width: 100%;
     margin: 1.25rem 1rem;
+
     
     @include tablet {
       display: inline-flex;
