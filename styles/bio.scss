@@ -204,12 +204,16 @@ body {
     display: block;
     width: 100%;
     margin: 1rem 1rem;
-
+    filter: grayscale(70%);
     
     @include tablet {
       display: inline-flex;
       width: 28%;
       height: 20vh;
+    }
+    &:hover {
+      //opacity: 70%;
+      filter: grayscale(0%);
     }
   }
 }

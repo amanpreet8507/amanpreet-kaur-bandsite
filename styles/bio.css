@@ -197,6 +197,7 @@ body {
   display: block;
   width: 100%;
   margin: 1rem 1rem;
+  filter: grayscale(70%);
 }
 @media screen and (min-width: 768px) {
   .photo-gallery__img {
@@ -204,6 +205,9 @@ body {
     width: 28%;
     height: 20vh;
   }
+}
+.photo-gallery__img:hover {
+  filter: grayscale(0%);
 }
 
 .footer {
