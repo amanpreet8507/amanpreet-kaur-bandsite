@@ -278,6 +278,8 @@ body {
 }
 .footer__contact-text {
   padding: 1rem 0;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 .footer__contact-text__bold {
   font-weight: bold;

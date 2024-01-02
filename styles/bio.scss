@@ -187,10 +187,6 @@ body {
   margin: 1.5rem 1rem 1.5rem 0;
   box-sizing: border-box;
 
-  @include tablet {
-    //padding: 2rem 3rem 2rem 3rem;
-  }
-
   &__imgs-div {
     margin-right: 1rem;
     @include tablet {
@@ -212,7 +208,6 @@ body {
       height: 20vh;
     }
     &:hover {
-      //opacity: 70%;
       filter: grayscale(0%);
     }
   }
@@ -293,6 +288,8 @@ body {
 
   &__contact-text{
     padding: 1rem 0;
+    color: $primary-white;
+    text-decoration: none;
   }
   &__contact-text__bold{
     font-weight: bold;
