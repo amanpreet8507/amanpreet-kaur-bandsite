@@ -60,7 +60,6 @@ body {
 
   &__nav-a {
     text-align: center;
-    color: $primary-white;
     text-decoration: none;
     width: 50%;
     color: $primary-silver;
@@ -78,7 +77,6 @@ body {
       border-bottom: 4px solid white;
       font-weight: bold;
       color: $primary-white;
-
     }
   }
 }
@@ -87,6 +85,7 @@ body {
 // main section content
 .main {
   //hero section
+  color: $primary-black;
   &__hero {
     position: relative;
     background-color: rgba(50, 50, 50, 50);
@@ -184,6 +183,7 @@ body {
 // specifically  photo gallery content
 .photo-gallery {
   background-color: $secondary-alabaster;
+  color: $primary-black;
   margin: 1.5rem 1rem 1.5rem 0;
   box-sizing: border-box;
 

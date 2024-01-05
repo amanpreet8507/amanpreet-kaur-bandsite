@@ -68,7 +68,6 @@ body {
 }
 .header__nav-a {
   text-align: center;
-  color: #FFFFFF;
   text-decoration: none;
   width: 50%;
   color: #AFAFAF;
@@ -88,6 +87,9 @@ body {
   color: #FFFFFF;
 }
 
+.main {
+  color: #323232;
+}
 .main__hero {
   position: relative;
   background-color: rgb(50, 50, 50);
@@ -180,6 +182,7 @@ body {
 
 .photo-gallery {
   background-color: #FAFAFA;
+  color: #323232;
   margin: 1.5rem 1rem 1.5rem 0;
   box-sizing: border-box;
 }
