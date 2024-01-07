@@ -20,7 +20,8 @@
         </a>
         <div class="header__nav-links">
           <a href="./index.html" class="header__nav-a header__nav-a--active"
-            >Biography</a>
+            >Biography</a
+          >
           <a href="./pages/shows.html" class="header__nav-a">Shows</a>
         </div>
       </nav>
@@ -137,12 +138,16 @@
       <!-- Comment Section -->
       <section class="comment-section">
         <h1 class="main__section-header">Join the Conversation</h1>
-        <div class="comment-section__container">
+        <form id="commentForm" class="comment-section__container">
           <div class="comment-section__profile">
             <!-- add alt here later -->
-            <img class="comment-section__profile-img" src="" />
+            <img
+              id="commentsImg"
+              class="comment-section__profile-img"
+              src="./assets/images/band.jpg"
+            />
           </div>
-          <form id="commentForm" class="comment-section__form">
+          <div class="comment-section__form">
             <div class="comment-section__form-div">
               <label for="name" class="comment-section__label">NAME</label>
               <input
@@ -158,14 +163,16 @@
               <textarea
                 name="comment"
                 placeholder="Add a new comment"
-                class="comment-section__field "
+                class="comment-section__field"
               ></textarea>
             </div>
-            <button type="submit" class="comment-section__button">COMMENT</button>
-          </form>
-        </div>
+            <button type="submit" class="comment-section__button">
+              COMMENT
+            </button>
+          </div>
+        </form>
         <!-- Added comments Section -->
-        <div class="comment-section__text"></div>
+        <div class="comments__container"></div>
       </section>
     </main>
 

@@ -216,11 +216,17 @@ body {
 // specifically comment section content
 .comment-section{
 
+
   &__container{
     display: flex;
     gap: 1rem;
     width: 100%;
     margin: 1rem;
+
+    @include desktop{
+      width: 100%;
+      padding: 1% 25%;
+    }
   }
 
   &__profile-img{
@@ -271,10 +277,69 @@ body {
     padding: 1rem;
     border-radius: 4px;
     margin-top: .50rem;
+
+    @include tablet{
+      width: 25%;
+      margin-left: 75%;
+    }
   }
 }
 
+// specifically comments__container section content
+.comments__container{
 
+  margin: 2rem;
+  font-size: $body-copy;
+
+  @include desktop{
+    width: 100%;
+    padding: 1% 25%;
+  }
+
+  &-section{
+    border-top: 2px solid $secondary-mercury;
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @include tablet{
+      margin: auto 5rem auto 3rem;
+    }
+  }
+
+  &-profile-img{
+    display: inline;
+  }
+
+  &-comment-details{
+    display: inline;
+    padding: auto 2rem;
+    width: 95%;
+  }
+
+  &-name-date{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+  }
+
+  &-name{
+    font-weight: bold;
+  }
+
+  &-date{
+
+  }
+
+  &-comment-div{
+
+  }
+
+  &-comment{
+
+  }
+}
 // footer content
 .footer {
   background-color: $primary-black;
@@ -316,10 +381,6 @@ body {
       margin: 0;
       font-size: $section-header;
     }
-
-    @include desktop {
-      
-    }
   }
 
   &__nav-icons {   
@@ -337,11 +398,12 @@ body {
   }
 
   &__contact-div {
-    margin: 2rem 0;
+    margin: .75rem 0;
+
     @include tablet{
       padding-right: 2rem;
-
     }
+    
     @include desktop {
       width: 28%;
       font-size: $body-copy;

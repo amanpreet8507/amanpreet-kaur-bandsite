@@ -219,6 +219,12 @@ body {
   width: 100%;
   margin: 1rem;
 }
+@media screen and (min-width: 1024px) {
+  .comment-section__container {
+    width: 100%;
+    padding: 1% 25%;
+  }
+}
 .comment-section__profile-img {
   background-color: #AFAFAF;
   width: 2.25rem;
@@ -267,7 +273,51 @@ body {
   border-radius: 4px;
   margin-top: 0.5rem;
 }
+@media screen and (min-width: 768px) {
+  .comment-section__button {
+    width: 25%;
+    margin-left: 75%;
+  }
+}
 
+.comments__container {
+  margin: 2rem;
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 1024px) {
+  .comments__container {
+    width: 100%;
+    padding: 1% 25%;
+  }
+}
+.comments__container-section {
+  border-top: 2px solid #E1E1E1;
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .comments__container-section {
+    margin: auto 5rem auto 3rem;
+  }
+}
+.comments__container-profile-img {
+  display: inline;
+}
+.comments__container-comment-details {
+  display: inline;
+  padding: auto 2rem;
+  width: 95%;
+}
+.comments__container-name-date {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+.comments__container-name {
+  font-weight: bold;
+}
 .footer {
   background-color: #323232;
   padding: 1rem 2rem;
@@ -323,7 +373,7 @@ body {
   }
 }
 .footer__contact-div {
-  margin: 2rem 0;
+  margin: 0.75rem 0;
 }
 @media screen and (min-width: 768px) {
   .footer__contact-div {
