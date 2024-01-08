@@ -1,6 +1,10 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 @use "./partials/typography" as *;
+@use "./partials/hero" as *;
+@use "./partials/headerNav" as *;
+@use "./partials/button" as *;
+@use "./partials/footer" as *;
 
 *,
 *::after,
@@ -15,131 +19,12 @@ body {
   font-family: "Avenir Next LT Pro";
 }
 
-
-// header section content
-.header {
-  width: 100%;
-  //header nav
-  &__nav {
-    background-color: $primary-black;
-    width: 100%;
-    height: 14.7vh;
-    padding-top: 0.625rem;
-    
-    @include tablet {
-      height: 12vh;
-      display: flex;
-      align-items: center;
-      text-align: center;
-    }
-  }
-
-  &__nav-logo {
-    margin: 0 auto;
-    padding-top: 1rem;
-    display: block;
-
-    @include tablet{
-      margin: auto 5rem auto 8rem;
-      padding: 0;
-    }
-  }
-
-  &__nav-links {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    align-content: space-between;
-    padding-top: 1.25rem; 
-
-    @include tablet {
-      //gap: 5px;
-      padding-top: 0;
-    }
-  }
-
-  &__nav-a {
-    text-align: center;
-    text-decoration: none;
-    width: 50%;
-    color: $secondary-mercury;
-    line-height: 2.5rem;
-
-    @include tablet {
-      margin-right: 7rem;
-      line-height: 4.8rem;
-      width: 20%;
-      margin-right: 2rem;
-    }
-
-    &:hover,
-    &--active {
-      border-bottom: 4px solid white;
-      font-weight: bold;
-      color: $primary-white;
-    }
-  }
-}
-
-
 // main section content
-.main {
-  //hero section
-  color: $primary-black;
-  &__hero {
-    position: relative;
-    background-color: rgba(50, 50, 50, 50);
-  }
-
-  &__hero-image {
-    height: 38vh;
-    width: 100%;
-    opacity: 70%;
-    display: block;
-
-    @include tablet {
-      height: 70vh;
-    }
-
-    @include desktop {
-      height: auto;
-    }
-  }
-
-  &__hero-text {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    width: 100%;
-    height: 2.75rem;
-    font-weight: bold;
-    font-size: $section-header;
-    color: $primary-white;
-
-    @include tablet {
-      font-size: $page-header;
-    }
-  }
-
+.main{
+ 
   //musicians and photo gallary section
   &__section {
     margin: 1rem;
-  }
-
-  &__section-header {
-    font-size: $section-header;
-    margin: 1.5rem;
-    font-weight: bold;
-    
-
-    @include tablet {
-      padding-top: 4rem;
-      margin: 4rem auto 4rem 2rem;
-    }
-
-    @include desktop {
-      font-size: $page-header;
-    }
   }
 
   &__section-subheader {
@@ -180,6 +65,9 @@ body {
   }
 }
 
+.shows-container-date{
+  font-weight: bold;
+}
 // specifically  photo gallery content
 .photo-gallery {
   background-color: $secondary-alabaster;
@@ -270,19 +158,6 @@ body {
     font-weight: bold;
   }
 
-  &__button{
-    background-color: $primary-black;
-    color: $primary-white;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 4px;
-    margin-top: .50rem;
-
-    @include tablet{
-      width: 25%;
-      margin-left: 75%;
-    }
-  }
 }
 
 // specifically comments__container section content
@@ -328,114 +203,4 @@ body {
     font-weight: bold;
   }
 
-  &-date{
-
-  }
-
-  &-comment-div{
-
-  }
-
-  &-comment{
-
-  }
-}
-// footer content
-.footer {
-  background-color: $primary-black;
-  padding: 1rem 2rem;
-  color: $primary-white;
-
-  @include tablet{
-    padding: 3rem 5rem;
-  }
-  @include desktop {
-    padding: 3rem 5rem;
-  }
-
-  &__div-container{
-    @include tablet{
-      display: flex;
-    }
-  }
-
-  &__nav-and-contact {
-    @include tablet {
-      width: 75%;
-    }
-    @include desktop {
-      justify-content: space-between;
-    }
-  }
-
-  &__nav {
-    @include tablet {
-      display: flex;
-      gap: 2rem;
-      padding-bottom: 0.7rem;
-    }
-  }
-
-  &__nav-header {
-    @include tablet {
-      margin: 0;
-      font-size: $section-header;
-    }
-  }
-
-  &__nav-icons {   
-    padding: 1rem 0; 
-  }
-
-  &__icon {
-    padding-right: 2rem;
-  }
-
-  &__contact{
-    @include tablet{
-      display: flex;
-    }
-  }
-
-  &__contact-div {
-    margin: .75rem 0;
-
-    @include tablet{
-      padding-right: 2rem;
-    }
-    
-    @include desktop {
-      width: 28%;
-      font-size: $body-copy;
-    }
-  }
-
-  &__contact-text{
-    padding: 1rem 0;
-    color: $primary-white;
-    text-decoration: none;
-  }
-  &__contact-text__bold{
-    font-weight: bold;
-  }
-  
-  // footer bandsite logo
-  &__logo-img {
-    margin-top: 4rem;
-
-    @include tablet {
-      margin: 0;
-      height: 1.25rem;
-      height: 3vh;
-      width: 9.5rem;
-    }
-  }
-
-  // footer copyright content
-  &__copyright-text {
-    padding-top: 1rem;
-    @include desktop {
-      font-size: $body-copy;
-    }
-  }
 }

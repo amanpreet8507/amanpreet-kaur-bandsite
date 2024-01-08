@@ -1,0 +1,103 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+
+// footer content
+.footer {
+  background-color: $primary-black;
+  padding: 1rem 2rem;
+  color: $primary-white;
+
+  @include tablet{
+    padding: 3rem 5rem;
+  }
+  @include desktop {
+    padding: 3rem 5rem;
+  }
+
+  &__div-container{
+    @include tablet{
+      display: flex;
+    }
+  }
+
+  &__nav-and-contact {
+    @include tablet {
+      width: 75%;
+    }
+    @include desktop {
+      justify-content: space-between;
+    }
+  }
+
+  &__nav {
+    @include tablet {
+      display: flex;
+      gap: 2rem;
+      padding-bottom: 0.7rem;
+    }
+  }
+
+  &__nav-header {
+    @include tablet {
+      margin: 0;
+      font-size: $section-header;
+    }
+  }
+
+  &__nav-icons {   
+    padding: 1rem 0; 
+  }
+
+  &__icon {
+    padding-right: 2rem;
+  }
+
+  &__contact{
+    @include tablet{
+      display: flex;
+    }
+  }
+
+  &__contact-div {
+    margin: .75rem 0;
+
+    @include tablet{
+      padding-right: 2rem;
+    }
+    
+    @include desktop {
+      width: 28%;
+      font-size: $body-copy;
+    }
+  }
+
+  &__contact-text{
+    padding: 1rem 0;
+    color: $primary-white;
+    text-decoration: none;
+  }
+  &__contact-text__bold{
+    font-weight: bold;
+  }
+  
+  // footer bandsite logo
+  &__logo-img {
+    margin-top: 4rem;
+
+    @include tablet {
+      margin: 0;
+      height: 1.25rem;
+      height: 3vh;
+      width: 9.5rem;
+    }
+  }
+
+  // footer copyright content
+  &__copyright-text {
+    padding-top: 1rem;
+    @include desktop {
+      font-size: $body-copy;
+    }
+  }
+}

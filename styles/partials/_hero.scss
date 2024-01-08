@@ -1,0 +1,92 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.main {
+  //hero section
+  color: $primary-black;
+  &__hero {
+    position: relative;
+    background-color: rgba(50, 50, 50, 50);
+  }
+
+  &__hero-image {
+    height: 45vh;
+    width: 100%;
+    opacity: 70%;
+    display: block;
+
+    @include tablet {
+      height: 70vh;
+    }
+
+    @include desktop {
+      height: auto;
+    }
+  }
+  &__hero-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &__hero-text {
+    position: relative;
+    top: 5%;
+    left: 5%;
+    // width: 100%;
+    // height: 2.75rem;
+    font-weight: bold;
+    font-size: $section-header;
+    color: $primary-white;
+
+    @include tablet {
+      font-size: $page-header;
+    }
+  }
+  &__hero-subtext{
+    font-size: $subheader;
+    margin-top: 2rem;
+  }
+  &__hero-song{
+    width: 80%;
+    height: 40%;
+    position: relative;
+    margin: auto 10%;
+  }
+
+  &__hero-header{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 100%;
+    height: 2.75rem;
+    font-weight: bold;
+    font-size: $section-header;
+    color: $primary-white;
+
+    @include tablet {
+      font-size: $page-header;
+    }
+  }
+
+  // Main section content
+  &__section-header {
+    font-size: $section-header;
+    margin: 1.5rem;
+    font-weight: bold;
+    
+
+    @include tablet {
+      margin: 4rem auto 4rem 2rem;
+    }
+
+    @include desktop {
+      font-size: $page-header;
+    }
+  }
+}

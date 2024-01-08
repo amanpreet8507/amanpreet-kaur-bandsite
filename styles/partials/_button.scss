@@ -1,0 +1,18 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.button{
+    background-color: $primary-black;
+    color: $primary-white;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+
+    @include tablet{
+      width: 25%;
+      margin-left: 75%;
+    }
+  }http://127.0.0.1:5500/assets/images/hero-bio.jpg

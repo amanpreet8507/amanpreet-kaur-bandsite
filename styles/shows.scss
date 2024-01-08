@@ -1,17 +1,39 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 @use "./partials/typography" as *;
+@use "./partials/hero" as *;
+@use "./partials/button" as *;
+@use "./partials/headerNav" as *;
+@use "./partials/footer" as *;
 
-.main{
-    &__hero-subtext {
-        position: absolute;
-        top: 40%; /* Adjust the top value as needed */
-        left: 10%;
-        font-size: $subtext-size;
-        color: $primary-white;
-      
-        @include tablet {
-          font-size: $page-header;
-        }
-    }
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+html,
+body {
+  font-family: "Avenir Next LT Pro";
+}
+
+.shows-container{
+  margin: 1rem;
+  &__card{
+    padding-top: 2rem;
+    border-bottom: 2px solid $secondary-mercury;
+  }
+  &__heading{
+    color: $primary-silver;
+    font-weight: bold;
+    padding: 1rem 0;
+  }
+  &__date{
+    font-weight: bold;
+
+  }
+
+}
+
