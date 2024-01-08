@@ -1,0 +1,17 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+@use "./partials/typography" as *;
+
+.main{
+    &__hero-subtext {
+        position: absolute;
+        top: 40%; /* Adjust the top value as needed */
+        left: 10%;
+        font-size: $subtext-size;
+        color: $primary-white;
+      
+        @include tablet {
+          font-size: $page-header;
+        }
+    }
+}
