@@ -92,7 +92,6 @@
 }
 @media screen and (min-width: 768px) {
   .main__section-header {
-    padding-top: 4rem;
     margin: 4rem auto 4rem 2rem;
   }
 }
@@ -111,6 +110,7 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: bold;
+  font-size: 0.75rem;
 }
 @media screen and (min-width: 768px) {
   .button {
@@ -289,18 +289,85 @@ body {
   font-family: "Avenir Next LT Pro";
 }
 
+@media screen and (min-width: 1024px) {
+  .main__section-shows {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main__section-header {
+    margin: 2rem 4rem auto 4rem;
+  }
+}
+
 .shows-container {
   margin: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .shows-container {
+    width: 70%;
+  }
 }
 .shows-container__card {
   padding-top: 2rem;
   border-bottom: 2px solid #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .shows-container__card {
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+  }
 }
 .shows-container__heading {
   color: #AFAFAF;
   font-weight: bold;
   padding: 1rem 0;
 }
+@media screen and (min-width: 768px) {
+  .shows-container__heading {
+    display: none;
+  }
+}
 .shows-container__date {
   font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .button {
+    margin: 0 1rem auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .button {
+    width: 15%;
+  }
+}
+
+.headings-card {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .headings-card {
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+    color: #AFAFAF;
+    font-weight: bold;
+  }
+}
+@media screen and (min-width: 768px) {
+  .headings-card__venue {
+    margin-left: 4rem;
+  }
+}
+.headings-card__button {
+  background-color: white;
+  border-style: none;
 }/*# sourceMappingURL=shows.css.map */

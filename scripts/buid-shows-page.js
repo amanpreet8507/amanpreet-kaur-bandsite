@@ -38,7 +38,35 @@ const showsList = [
   // Function to create and render show elements
   function renderShows() {
     const showsContainer = document.querySelector('.shows-container');
-  
+    // Create elements
+    // Containing single DATE, VENUE, LOCATION headings only for tablet and destop screen
+    const headingsCardEl = document.createElement('div')
+
+    const headingDateEl = document.createElement('p')
+    const headingVenueEl = document.createElement('p')
+    const headingLocationEl = document.createElement('p')
+    const headingButtonEl = document.createElement('button')
+
+    // Add Classes for headings
+    headingsCardEl.classList.add('headings-card')
+    headingDateEl.classList.add('headings-card__date')
+    headingVenueEl.classList.add('headings-card__venue')
+    headingLocationEl.classList.add('headings-card__location')
+    headingButtonEl.classList.add('button')
+    headingButtonEl.classList.add('headings-card__button')
+    // Set InnerText
+    headingDateEl.innerText = 'DATE'
+    headingVenueEl.innerText = 'VENUE'
+    headingLocationEl.innerText = 'LOCATION'
+    headingButtonEl.innerText = 'BUY TICKETS'
+
+    // Append Child to Parent
+    headingsCardEl.appendChild(headingDateEl)
+    headingsCardEl.appendChild(headingVenueEl)
+    headingsCardEl.appendChild(headingLocationEl)
+    headingsCardEl.appendChild(headingButtonEl)
+    showsContainer.appendChild(headingsCardEl)
+
     showsList.forEach((show) => {
     // Create elements
       const showCardEl = document.createElement('div')

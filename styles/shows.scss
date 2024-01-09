@@ -8,7 +8,7 @@
 
 *,
 *::after,
-*::before{
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -19,21 +19,97 @@ body {
   font-family: "Avenir Next LT Pro";
 }
 
-.shows-container{
+.main__section {
+  &-shows {
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &-header{
+    @include desktop{
+      margin: 2rem 4rem auto 4rem;
+
+    }
+  }
+}
+.shows-container {
   margin: 1rem;
-  &__card{
+
+  @include desktop{
+    width: 70%;
+  }
+
+  &__card {
     padding-top: 2rem;
     border-bottom: 2px solid $secondary-mercury;
+
+    @include tablet {
+      display: flex;
+      gap: 1rem;
+      text-align: center;
+      align-items: center;
+      padding: 1rem;
+      justify-content: space-between;
+    }
   }
-  &__heading{
+  &__heading {
     color: $primary-silver;
     font-weight: bold;
     padding: 1rem 0;
+
+    @include tablet {
+      display: none;
+    }
   }
-  &__date{
+
+  &__date {
     font-weight: bold;
-
+    @include tablet {
+    }
   }
 
+  &__venue {
+    @include tablet {
+    }
+  }
+
+  &__location {
+    @include tablet {
+    }
+  }
 }
 
+.button {
+  @include tablet {
+    margin: 0 1rem auto;
+  }
+  @include desktop {
+    width: 15%;
+  }
+}
+
+// Headings card for tablet and desktop
+.headings-card {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+    color: $primary-silver;
+    font-weight: bold;
+  }
+  &__venue {
+    @include tablet {
+      margin-left: 4rem;
+    }
+  }
+  &__button {
+    background-color: white;
+    border-style: none;
+  }
+}
