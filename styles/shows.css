@@ -33,7 +33,7 @@
 }
 @media screen and (min-width: 1024px) {
   .main__hero-image {
-    height: auto;
+    height: 90vh;
   }
 }
 .main__hero-container {
@@ -47,6 +47,12 @@
   justify-content: center;
   align-items: flex-start;
 }
+@media screen and (min-width: 1024px) {
+  .main__hero-container {
+    flex-direction: row;
+    gap: 7rem;
+  }
+}
 .main__hero-text {
   position: relative;
   top: 5%;
@@ -58,6 +64,15 @@
 @media screen and (min-width: 768px) {
   .main__hero-text {
     font-size: 3.75rem;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main__hero-text {
+    margin-top: 7rem;
+    font-weight: normal;
+    width: 40%;
+    align-items: center;
   }
 }
 .main__hero-subtext {
@@ -69,6 +84,20 @@
   height: 40%;
   position: relative;
   margin: auto 10%;
+}
+@media screen and (min-width: 768px) {
+  .main__hero-song {
+    width: 60%;
+    height: 25%;
+    margin: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main__hero-song {
+    width: 40%;
+    height: 25%;
+    margin-top: 14rem;
+  }
 }
 .main__hero-header {
   position: absolute;
@@ -125,12 +154,11 @@
 .header__nav {
   background-color: #323232;
   width: 100%;
-  height: 14.7vh;
   padding-top: 0.625rem;
 }
 @media screen and (min-width: 768px) {
   .header__nav {
-    height: 12vh;
+    height: 16vh;
     display: flex;
     align-items: center;
     text-align: center;

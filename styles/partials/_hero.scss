@@ -20,7 +20,7 @@
     }
 
     @include desktop {
-      height: auto;
+      height: 90vh;
     }
   }
   &__hero-container {
@@ -33,6 +33,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    @include tablet{
+
+    }
+
+    @include desktop{
+      flex-direction: row;
+      gap: 7rem;
+    }
   }
   &__hero-text {
     position: relative;
@@ -44,6 +53,14 @@
 
     @include tablet {
       font-size: $page-header;
+      width: 60%;
+    }
+
+    @include desktop{
+      margin-top: 7rem;
+      font-weight: normal;
+      width: 40%;
+      align-items: center;
     }
   }
   &__hero-subtext{
@@ -55,6 +72,18 @@
     height: 40%;
     position: relative;
     margin: auto 10%;
+
+    @include tablet{
+      width: 60%;
+      height: 25%;
+      margin: 2rem;
+    }
+
+    @include desktop{
+      width: 40%;
+      height: 25%;
+      margin-top: 14rem;
+    }
   }
 
   &__hero-header{
