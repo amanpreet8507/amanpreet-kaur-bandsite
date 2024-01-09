@@ -19,9 +19,6 @@ body {
   font-family: "Avenir Next LT Pro";
 }
 
-.main__hero-container {
-  
-}
 .main__section {
   &-shows {
     @include desktop {
@@ -36,6 +33,7 @@ body {
     }
   }
 }
+
 .shows-container {
   margin: 1rem;
 
@@ -55,7 +53,13 @@ body {
       padding: 1rem;
       justify-content: space-between;
     }
+
+    // Hover showCard element(show table row)
+    &:hover {
+      background-color: $secondary-alabaster;
+    }
   }
+
   &__heading {
     color: $primary-silver;
     font-weight: bold;
@@ -71,16 +75,6 @@ body {
     @include tablet {
     }
   }
-
-  &__venue {
-    @include tablet {
-    }
-  }
-
-  &__location {
-    @include tablet {
-    }
-  }
 }
 
 .button {
@@ -92,7 +86,7 @@ body {
   }
 }
 
-// Headings card for tablet and desktop
+// Headings card DATE, VENUE AND LOCATION
 .headings-card {
   display: none;
 
@@ -115,4 +109,9 @@ body {
     background-color: white;
     border-style: none;
   }
+}
+
+// Show Clicked effect
+.show__clicked{
+  background-color: $secondary-mercury;
 }

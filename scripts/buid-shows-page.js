@@ -98,25 +98,6 @@ const showsList = [
       locationEl.innerText = show.location
       ticketsButtonEl.innerText = `BUY TICKETS`
 
-       
-  
-    // Add event listeners for hover and click
-       showCardEl.addEventListener('mouseover', () => {
-         showCardEl.classList.add('hovered');
-       });
-  
-       showCardEl.addEventListener('mouseout', () => {
-         showCardEl.classList.remove('hovered');
-       });
-  
-       showCardEl.addEventListener('click', () => {
-         document.querySelectorAll('.shows-container__card').forEach((item) => {
-           item.classList.remove('selected');
-         });
-  
-         showCardEl.classList.add('selected');
-       });
-
       // append child to parent
       showsContainer.appendChild(showCardEl)
       showCardEl.appendChild(dateHeadingEl)
@@ -126,7 +107,19 @@ const showsList = [
       showCardEl.appendChild(locationHeadingEl)
       showCardEl.appendChild(locationEl)
       showCardEl.appendChild(ticketsButtonEl)
+
+      // Add event listeners for clicked show effect 
+      showCardEl.addEventListener('click', () => {
+        document.querySelectorAll('.shows-container__card').forEach((card) => {
+          item.classList.remove('show__clicked');
+        });
+ 
+        showCardEl.classList.add('show__clicked');
+      });
+
     });
+
+    
   }
   
   // Initial render

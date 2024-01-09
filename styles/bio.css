@@ -23,7 +23,7 @@
 .main__hero-image {
   height: 45vh;
   width: 100%;
-  opacity: 70%;
+  opacity: 50%;
   display: block;
 }
 @media screen and (min-width: 768px) {
@@ -33,7 +33,7 @@
 }
 @media screen and (min-width: 1024px) {
   .main__hero-image {
-    height: 90vh;
+    height: 120vh;
   }
 }
 .main__hero-container {

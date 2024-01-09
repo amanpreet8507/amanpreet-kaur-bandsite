@@ -12,7 +12,7 @@
   &__hero-image {
     height: 45vh;
     width: 100%;
-    opacity: 70%;
+    opacity: 50%;
     display: block;
 
     @include tablet {
@@ -20,7 +20,7 @@
     }
 
     @include desktop {
-      height: 90vh;
+      height: 120vh;
     }
   }
   &__hero-container {

@@ -23,7 +23,7 @@
 .main__hero-image {
   height: 45vh;
   width: 100%;
-  opacity: 70%;
+  opacity: 50%;
   display: block;
 }
 @media screen and (min-width: 768px) {
@@ -33,7 +33,7 @@
 }
 @media screen and (min-width: 1024px) {
   .main__hero-image {
-    height: 90vh;
+    height: 120vh;
   }
 }
 .main__hero-container {
@@ -351,6 +351,9 @@ body {
     justify-content: space-between;
   }
 }
+.shows-container__card:hover {
+  background-color: #FAFAFA;
+}
 .shows-container__heading {
   color: #AFAFAF;
   font-weight: bold;
@@ -398,4 +401,8 @@ body {
 .headings-card__button {
   background-color: white;
   border-style: none;
+}
+
+.show__clicked {
+  background-color: #E1E1E1;
 }/*# sourceMappingURL=shows.css.map */
