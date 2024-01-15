@@ -4,6 +4,7 @@
 //     { name: 'Miles Acosta', date: '12/20/2020', comment: `I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.` }
 //   ];
 import BandSiteApi from "./band-site-api.js";
+import { convertTimeStampToDate } from "./band-site-api.js";
 
 const apiKey = "0c1318a1-0c91-4df5-9cfa-b8cbad39d045";
 const bandSiteApi = new BandSiteApi(apiKey);
@@ -21,6 +22,7 @@ function displayComment(comment) {
   const nameEl = document.createElement("p");
   const dateEl = document.createElement("p");
   const commentEl = document.createElement("p");
+  
 
   // Add classes to elements
   commentSectionEl.classList.add("comments__container-section");
@@ -42,10 +44,13 @@ function displayComment(comment) {
   commentSectionEl.appendChild(commentDetailsDivEl);
   commentsContainer.appendChild(commentSectionEl);
 
+  // Use convertTimestampToDate function to show actual date
+  const formatDate = convertTimeStampToDate(comment.timestamp)
+
   // Populate elements with comment data
   profileImageEl.innerHTML = comment.image;
   nameEl.innerText = comment.name;
-  dateEl.innerText = comment.date;
+  dateEl.innerText = formatDate;
   commentEl.innerText = comment.comment;
 }
 
@@ -55,7 +60,8 @@ const displayOldComments = async () => {
   try {
     const oldComments = await bandSiteApi.getComments();
     console.log(oldComments);
-    return oldComments.forEach(displayComment);
+    const reverseComments = oldComments.reverse()
+    return reverseComments.forEach(displayComment);
   } catch (error) {
     console.error("Error displayOldComments: ", error);
   }

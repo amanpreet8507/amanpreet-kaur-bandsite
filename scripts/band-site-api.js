@@ -6,9 +6,10 @@
 // API shows: get
 // https://project-1-api.herokuapp.com/showdates?api_key=0c1318a1-0c91-4df5-9cfa-b8cbad39d045
 
+// BandSiteApi Class
 class BandSiteApi {
   constructor(apiKey) {
-    this.apiKey = "0c1318a1-0c91-4df5-9cfa-b8cbad39d045",
+    apiKey = "0c1318a1-0c91-4df5-9cfa-b8cbad39d045",
     this.baseUrl = "https://project-1-api.herokuapp.com/"
   }
 
@@ -46,7 +47,7 @@ class BandSiteApi {
 
   // GetShows object
   getShows = async () => {
-    const url = `${this.baseUrl}showdates?api_key=${this.api}`
+    const url = `${this.baseUrl}showdates?api_key=${this.apiKey}`
     try {
       const response = await axios.get(url);
       const finalOutput = response.data;
@@ -56,6 +57,19 @@ class BandSiteApi {
       console.error("Error GetShows: ", error);
     }
   };
+}
+
+// Function to convert timestamp to date
+export const convertTimeStampToDate = (timestamp) => {
+  const date = new Date(timestamp)
+
+  const day = date.getDate()+1
+  const month = date.getMonth()+1
+  const year = date.getFullYear()
+
+  const finalDate  = `${day}/${month}/${year}`
+
+  return finalDate
 }
 
 export default BandSiteApi;

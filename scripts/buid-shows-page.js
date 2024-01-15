@@ -1,42 +1,17 @@
 import BandSiteApi from "./band-site-api.js";
+import { convertTimeStampToDate } from "./band-site-api.js";
 
-const apiKey = "0c1318a1-0c91-4df5-9cfa-b8cbad39d045";
-const bandSiteApi = new BandSiteApi(apiKey);
+const bandSiteApi = new BandSiteApi("0c1318a1-0c91-4df5-9cfa-b8cbad39d045");
 
 const showHeading = ["DATE", "VENUE", "LOCATION"];
 
 // const showsList = [
-//     {
-//         date: "Mon Sept 06 2021",
-//         venue: "Ronald Lane",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Mon Sept 06 2021",
-//         venue: "Ronald Lane",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Mon Sept 06 2021",
-//         venue: "Ronald Lane",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Mon Sept 06 2021",
-//         venue: "Ronald Lane",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Mon Sept 06 2021",
-//         venue: "Ronald Lane",
-//         location: "San Francisco, CA"
-//     },
-//     {
-//         date: "Mon Sept 06 2021",
-//         venue: "Ronald Lane",
-//         location: "San Francisco, CA"
-//     }
-// ]
+//     { date: "Mon Sept 06 2021", venue: "Ronald Lane", location: "San Francisco, CA"},
+//     { date: "Mon Sept 06 2021", venue: "Ronald Lane", location: "San Francisco, CA" },
+//     { date: "Mon Sept 06 2021", venue: "Ronald Lane", location: "San Francisco, CA"},
+//     { date: "Mon Sept 06 2021",venue: "Ronald Lane", location: "San Francisco, CA"},
+//     { date: "Mon Sept 06 2021", venue: "Ronald Lane", location: "San Francisco, CA"},
+//     { date: "Mon Sept 06 2021", venue: "Ronald Lane", location: "San Francisco, CA"} ]
 
 // Function to create and render show elements
 const renderShows = async () => {
@@ -94,11 +69,13 @@ const renderShows = async () => {
       locationEl.classList.add("shows-container__location");
       ticketsButtonEl.classList.add("button");
 
+      // Use convertTimestampToDate function to show actual date
+      const formatDate = convertTimeStampToDate(show.date)
       // Set innerText
       dateHeadingEl.innerText = showHeading[0];
       venueHeadingEl.innerText = showHeading[1];
       locationHeadingEl.innerText = showHeading[2];
-      dateEl.innerText = show.date;
+      dateEl.innerText = formatDate;
       venueEl.innerText = show.place;
       locationEl.innerText = show.location;
       ticketsButtonEl.innerText = `BUY TICKETS`;
@@ -114,13 +91,13 @@ const renderShows = async () => {
       showCardEl.appendChild(ticketsButtonEl);
 
       // Add event listeners for clicked show effect
-      // showCardEl.addEventListener("click", () => {
-      //   document.querySelectorAll(".shows-container__card").forEach((card) => {
-      //     item.classList.remove("show__clicked");
-      //   });
+      showCardEl.addEventListener("click", () => {
+        document.querySelectorAll(".shows-container__card").forEach((card) => {
+          item.classList.remove("show__clicked");
+        });
 
-      //   showCardEl.classList.add("show__clicked");
-      // });
+        showCardEl.classList.add("show__clicked");
+      });
     });
   } catch (error) {
     console.error("Error render shows: ", error);
